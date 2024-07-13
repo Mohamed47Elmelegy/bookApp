@@ -47,29 +47,29 @@ class BestSellerListViewItem extends StatelessWidget {
                     ),
                     alignment: Alignment.bottomRight,
                     //Play Icon Container
-                    child: Container(
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey.withOpacity(0.7),
-                              blurRadius: 5,
-                              spreadRadius: 5),
-                        ],
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(100),
-                        ),
-                      ),
-                      child: IconButton(
-                        onPressed: () {
-                          navigatorKey.currentState!
-                              .pushNamed(PageRouteNames.details);
-                        },
-                        icon: const Icon(
-                          Icons.play_arrow,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
+                    // child: Container(
+                    //   decoration: BoxDecoration(
+                    //     boxShadow: [
+                    //       BoxShadow(
+                    //           color: Colors.grey.withOpacity(0.7),
+                    //           blurRadius: 5,
+                    //           spreadRadius: 5),
+                    //     ],
+                    //     borderRadius: const BorderRadius.all(
+                    //       Radius.circular(100),
+                    //     ),
+                    //   ),
+                    //   child: IconButton(
+                    //     onPressed: () {
+                    //       navigatorKey.currentState!
+                    //           .pushNamed(PageRouteNames.details);
+                    //     },
+                    //     icon: const Icon(
+                    //       Icons.play_arrow,
+                    //       color: Colors.white,
+                    //     ),
+                    //   ),
+                    // ),
                   ),
                 ),
               ],

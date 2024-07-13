@@ -1,8 +1,10 @@
 import 'package:book_with_claen_architecture/Features/presentation/Home/view/details_view.dart';
 import 'package:book_with_claen_architecture/Features/presentation/Home/view/home_view.dart';
+import 'package:book_with_claen_architecture/Features/presentation/Search/view/search_view.dart';
 import 'package:book_with_claen_architecture/core/config/page_route_names.dart';
 import 'package:flutter/material.dart';
 
+import '../../Features/presentation/Search/widget/search_view_body.dart';
 import '../../Features/presentation/Splash/view/splash_view.dart';
 
 class Routes {
@@ -21,6 +23,11 @@ class Routes {
       case PageRouteNames.details:
         return MaterialPageRoute(
           builder: (context) => const DetailsView(),
+          settings: settings,
+        );
+      case PageRouteNames.search:
+        return MaterialPageRoute(
+          builder: (context) => const SearchView(),
           settings: settings,
         );
       default:

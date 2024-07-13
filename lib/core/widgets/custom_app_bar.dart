@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../main.dart';
 import '../config/constants.dart';
+import '../config/page_route_names.dart';
 
 class CustomSliverAppBar extends StatelessWidget {
   const CustomSliverAppBar({super.key});
@@ -22,10 +23,12 @@ class CustomSliverAppBar extends StatelessWidget {
             Image.asset(AssetsData.logo, height: 16),
             const Spacer(),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                navigatorKey.currentState!.pushNamed(PageRouteNames.search);
+              },
               icon: const Icon(
                 FontAwesomeIcons.magnifyingGlass,
-                size: 20,
+                size: 18,
                 color: Colors.white,
               ),
             ),

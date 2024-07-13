@@ -3,4 +3,5 @@ class PageRouteNames {
   static const String splash = 'Splash';
   static const String home = 'HomeView';
   static const String details = 'DetailsView';
+  static const String search = 'SearchView';
 }

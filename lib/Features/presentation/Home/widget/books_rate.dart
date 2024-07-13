@@ -16,6 +16,7 @@ class BooksRate extends StatelessWidget {
         const Icon(
           FontAwesomeIcons.solidStar,
           color: Colors.yellow,
+          size: 15,
         ),
         const Gap(6.3),
         Text(

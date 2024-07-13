@@ -15,7 +15,7 @@ class CutomBookImageListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.symmetric(horizontal: 7),
-            child: CustomBookImgae(), //Books List HomePage
+            child: CustomBookImage(), //Books List HomePage
           );
         },
         padding: EdgeInsets.zero,
