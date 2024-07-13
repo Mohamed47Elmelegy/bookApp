@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/config/constants.dart';
 import 'best_seller_item.dart';
 
 class BestSellerListView extends StatelessWidget {
@@ -8,16 +7,17 @@ class BestSellerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: Constants.mediaQuery.height * 0.48,
-      child: ListView.builder(
-        itemBuilder: (context, index) {
-          return const Padding(
-            padding: EdgeInsets.all(10),
-            child: BestSellerItem(),
-          );
-        },
-      ),
+    return ListView.builder(
+      padding: EdgeInsets.zero,
+      shrinkWrap: true,
+      itemCount: 20,
+      physics: const NeverScrollableScrollPhysics(),
+      itemBuilder: (context, index) {
+        return const Padding(
+          padding: EdgeInsets.symmetric(vertical: 10),
+          child: BestSellerListViewItem(),
+        );
+      },
     );
   }
 }

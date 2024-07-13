@@ -1,3 +1,4 @@
+import 'package:book_with_claen_architecture/Features/presentation/Home/view/details_view.dart';
 import 'package:book_with_claen_architecture/Features/presentation/Home/view/home_view.dart';
 import 'package:book_with_claen_architecture/core/config/page_route_names.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,11 @@ class Routes {
       case PageRouteNames.home:
         return MaterialPageRoute(
           builder: (context) => const HomeView(),
+          settings: settings,
+        );
+      case PageRouteNames.details:
+        return MaterialPageRoute(
+          builder: (context) => const DetailsView(),
           settings: settings,
         );
       default:

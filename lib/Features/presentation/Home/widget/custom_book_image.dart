@@ -1,15 +1,15 @@
 import 'package:book_with_claen_architecture/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
-class FeaturedListViewItem extends StatelessWidget {
-  const FeaturedListViewItem({super.key});
+class CustomBookImgae extends StatelessWidget {
+  const CustomBookImgae({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         AspectRatio(
-          aspectRatio: 2.5 / 4,
+          aspectRatio: 2.7 / 4,
           //Book Main Container
           child: Container(
             decoration: const BoxDecoration(
