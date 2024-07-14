@@ -1,9 +1,11 @@
+import 'package:book_with_claen_architecture/Features/Domin/Entities/book_entities.dart';
+
 import 'access_info.dart';
 import 'sale_info.dart';
 import 'search_info.dart';
 import 'volume_info.dart';
 
-class BookModels {
+class BookModel extends BookEntities {
   String? kind;
   String? id;
   String? etag;
@@ -13,7 +15,13 @@ class BookModels {
   AccessInfo? accessInfo;
   SearchInfo? searchInfo;
 
-  BookModels({
+  BookModel({
+    required super.bookId,
+    required super.image,
+    required super.title,
+    required super.authourName,
+    required super.price,
+    required super.rating,
     this.kind,
     this.id,
     this.etag,
@@ -24,7 +32,15 @@ class BookModels {
     this.searchInfo,
   });
 
-  factory BookModels.fromJson(Map<String, dynamic> json) => BookModels(
+  factory BookModel.fromJson(Map<String, dynamic> json) => BookModel(
+        bookId: json['id'] as String, // Assuming 'id' is the bookId
+        image: json['volumeInfo']?['imageLinks']?['thumbnail'] as String?,
+        title: json['volumeInfo']?['title'] as String? ?? '',
+        authourName: json['volumeInfo']?['authors'] != null
+            ? (json['volumeInfo']['authors'] as List<dynamic>).join(', ')
+            : null,
+        price: json['saleInfo']?['listPrice']?['amount'] as num?,
+        rating: json['volumeInfo']?['averageRating'] as num?,
         kind: json['kind'] as String?,
         id: json['id'] as String?,
         etag: json['etag'] as String?,
