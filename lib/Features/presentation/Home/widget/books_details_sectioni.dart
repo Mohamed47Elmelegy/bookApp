@@ -12,7 +12,6 @@ class BookDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(navigatorKey.currentState!.context);
     return Column(
       children: [
         Padding(
@@ -24,14 +23,14 @@ class BookDetailsSection extends StatelessWidget {
         const Gap(40),
         Text(
           'The Jungle Book',
-          style: theme.textTheme.titleLarge,
+          style: Constants.theme.textTheme.titleLarge,
         ),
         const Gap(
           4,
         ),
         Text(
           'Rudyard Kipling',
-          style: theme.textTheme.bodyMedium,
+          style: Constants.theme.textTheme.bodyMedium,
         ),
         const Gap(
           14,

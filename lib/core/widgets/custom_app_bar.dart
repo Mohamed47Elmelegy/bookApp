@@ -1,7 +1,6 @@
-import 'package:book_with_claen_architecture/core/utils/assets.dart';
+import '../../core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../main.dart';
 import '../config/constants.dart';
 import '../config/page_route_names.dart';
@@ -11,9 +10,8 @@ class CustomSliverAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(navigatorKey.currentState!.context);
     return SliverAppBar(
-      backgroundColor: theme.primaryColor,
+      backgroundColor: Constants.theme.primaryColor,
       pinned: true,
       expandedHeight: Constants.mediaQuery.height * 0.12,
       flexibleSpace: FlexibleSpaceBar(

@@ -2,12 +2,12 @@ import 'package:book_with_claen_architecture/Features/presentation/Home/widget/c
 import 'package:book_with_claen_architecture/main.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import '../../../../core/config/constants.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
 import 'best_seller_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   HomeViewBody({super.key});
-  final theme = Theme.of(navigatorKey.currentState!.context);
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -23,7 +23,7 @@ class HomeViewBody extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
                   "Best Seller",
-                  style: theme.textTheme.titleSmall,
+                  style: Constants.theme.textTheme.titleSmall,
                 ),
               ),
               const Gap(20),

@@ -1,6 +1,6 @@
-import 'package:book_with_claen_architecture/main.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import '../../../../core/config/constants.dart';
 import 'custom_search_text_field.dart';
 import 'search_result_listview.dart';
 
@@ -9,7 +9,6 @@ class SearchViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(navigatorKey.currentState!.context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Column(
@@ -21,7 +20,7 @@ class SearchViewBody extends StatelessWidget {
           ),
           Text(
             'Search Result',
-            style: theme.textTheme.titleSmall,
+            style: Constants.theme.textTheme.titleSmall,
           ),
           const Gap(
             16,

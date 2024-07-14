@@ -12,7 +12,6 @@ class BestSellerListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(navigatorKey.currentState!.context);
     return GestureDetector(
       onTap: () {
         navigatorKey.currentState!.pushNamed(
@@ -82,7 +81,7 @@ class BestSellerListViewItem extends StatelessWidget {
                   width: Constants.mediaQuery.width * 0.5,
                   child: Text(
                     'Harry Potter and the Goblet of Fire',
-                    style: theme.textTheme.titleMedium,
+                    style: Constants.theme.textTheme.titleMedium,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -90,14 +89,15 @@ class BestSellerListViewItem extends StatelessWidget {
                 const Gap(5),
                 Text(
                   'J.K. Rowling',
-                  style: theme.textTheme.bodyMedium,
+                  style: Constants.theme.textTheme.bodyMedium,
                 ),
                 const Gap(5),
                 Row(
                   children: [
                     Text(
                       "19.99 €",
-                      style: theme.textTheme.titleSmall?.copyWith(fontSize: 18),
+                      style: Constants.theme.textTheme.titleSmall
+                          ?.copyWith(fontSize: 18),
                     ),
                     const Gap(44.3),
                     const BooksRate()

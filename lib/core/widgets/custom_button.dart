@@ -1,4 +1,4 @@
-import 'package:book_with_claen_architecture/main.dart';
+import '../../core/config/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -17,7 +17,6 @@ class CustomButton extends StatelessWidget {
   final double? fontSize;
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(navigatorKey.currentState!.context);
     return SizedBox(
       height: 48,
       child: TextButton(
@@ -33,7 +32,9 @@ class CustomButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: theme.textTheme.titleSmall!.copyWith(color: textColor),
+          style: Constants.theme.textTheme.titleSmall!.copyWith(
+            color: textColor,
+          ),
         ),
       ),
     );

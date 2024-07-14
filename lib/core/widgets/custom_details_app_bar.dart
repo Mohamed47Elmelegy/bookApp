@@ -1,4 +1,4 @@
-import 'package:book_with_claen_architecture/main.dart';
+import '../../main.dart';
 import 'package:flutter/material.dart';
 
 class CustomDetailsAppBar extends StatelessWidget {
