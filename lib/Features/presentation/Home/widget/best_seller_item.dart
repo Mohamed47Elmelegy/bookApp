@@ -19,7 +19,7 @@ class BestSellerListViewItem extends StatelessWidget {
         );
       },
       child: SizedBox(
-        height: 150,
+        height: Constants.mediaQuery.height * 0.2,
         child: Row(
           children: [
             Stack(
@@ -73,7 +73,7 @@ class BestSellerListViewItem extends StatelessWidget {
                 ),
               ],
             ),
-            const Gap(25),
+            Gap(Constants.mediaQuery.width * 0.04),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

@@ -9,4 +9,6 @@ class Constants {
   static var theme = Theme.of(
     navigatorKey.currentState!.context,
   );
+  static const featuredBox = 'featured_box';
+  static const newestBox = 'newest_box';
 }

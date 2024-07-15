@@ -11,7 +11,7 @@ class FeachNewstBooksUseCase extends UseCase<List<BookEntities>, NoParm> {
   FeachNewstBooksUseCase(this.homeRepo);
 
   @override
-  Future<Either<Failuer, List<BookEntities>>> call([NoParm? param]) async {
-    return await homeRepo.feachNewestBooks();
+  Future<Either<Failure, List<BookEntities>>> call([NoParm? param]) async {
+    return await homeRepo.fetchNewestBooks();
   }
 }
