@@ -1,9 +1,7 @@
-import 'package:book_with_claen_architecture/core/config/constants.dart';
+import '../../../../core/config/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
-
-import '../../../../main.dart';
 
 class BooksRate extends StatelessWidget {
   const BooksRate({super.key});

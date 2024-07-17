@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-
 import '../../../../core/config/constants.dart';
-import '../../../../main.dart';
 import 'books_action.dart';
 import 'books_rate.dart';
 import 'custom_book_image.dart';
@@ -18,7 +16,9 @@ class BookDetailsSection extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             horizontal: Constants.mediaQuery.width * 0.2,
           ),
-          child: const CustomBookImage(),
+          child: const CustomBookImage(
+            image: '',
+          ),
         ),
         const Gap(40),
         Text(

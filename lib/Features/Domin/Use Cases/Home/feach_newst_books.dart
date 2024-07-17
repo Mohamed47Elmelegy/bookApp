@@ -8,7 +8,9 @@ import '../../Repositories/Home/home_repo.dart';
 class FeachNewstBooksUseCase extends UseCase<List<BookEntities>, NoParm> {
   final HomeRepo homeRepo;
 //UseCase To Repo(S ->Single Responsibility Principle. )-->A class should have only one reason to change.
-  FeachNewstBooksUseCase(this.homeRepo);
+  FeachNewstBooksUseCase(
+    this.homeRepo,
+  );
 
   @override
   Future<Either<Failure, List<BookEntities>>> call([NoParm? param]) async {

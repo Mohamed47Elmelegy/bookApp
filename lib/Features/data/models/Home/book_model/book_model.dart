@@ -1,8 +1,8 @@
-import 'package:book_with_claen_architecture/Features/Domin/Entities/book_entities.dart';
 import 'access_info.dart';
 import 'sale_info.dart';
 import 'search_info.dart';
 import 'volume_info.dart';
+import 'package:book_with_claen_architecture/Features/Domin/Entities/book_entities.dart';
 
 class BookModel extends BookEntities {
   String? kind;
@@ -54,7 +54,7 @@ class BookModel extends BookEntities {
           image: json['volumeInfo']?['imageLinks']?['thumbnail'] as String?,
           title: json['volumeInfo']?['title'] as String? ?? '',
           authourName: json['volumeInfo']?['authors'] != null
-              ? (json['volumeInfo']['authors'][''] as List<dynamic>).join(', ')
+              ? (json['volumeInfo']['authors'] as List<dynamic>).join(', ')
               : null,
           price: json['saleInfo']?['listPrice']?['amount'] as num? ?? 0,
           rating: json['volumeInfo']?['averageRating'] as num?,

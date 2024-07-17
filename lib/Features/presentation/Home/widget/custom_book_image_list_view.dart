@@ -1,10 +1,11 @@
-import 'package:book_with_claen_architecture/Features/presentation/Home/widget/custom_book_image.dart';
 import 'package:flutter/material.dart';
-
+import 'package:book_with_claen_architecture/Features/presentation/Home/widget/custom_book_image.dart';
 import '../../../../core/config/constants.dart';
+import '../../../Domin/Entities/book_entities.dart';
 
-class CutomBookImageListView extends StatelessWidget {
-  const CutomBookImageListView({super.key});
+class CustomBookImageListView extends StatelessWidget {
+  const CustomBookImageListView({super.key, required this.books});
+  final List<BookEntities> books;
 
   @override
   Widget build(BuildContext context) {
@@ -13,13 +14,15 @@ class CutomBookImageListView extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 7),
-            child: CustomBookImage(), //Books List HomePage
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 7),
+            child: CustomBookImage(
+              image: books[index].image ?? '',
+            ), //Books List HomePage
           );
         },
         padding: EdgeInsets.zero,
-        itemCount: 10,
+        itemCount: books.length,
       ),
     );
   }

@@ -1,8 +1,10 @@
-import 'package:book_with_claen_architecture/core/utils/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class CustomBookImage extends StatelessWidget {
-  const CustomBookImage({super.key});
+  final String image;
+
+  const CustomBookImage({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -11,46 +13,12 @@ class CustomBookImage extends StatelessWidget {
         AspectRatio(
           aspectRatio: 2.5 / 4,
           //Book Main Container
-          child: Container(
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.all(
-                Radius.circular(20),
-              ),
-              image: DecorationImage(
-                fit: BoxFit.fill,
-                image: AssetImage(
-                  AssetsData.textImageContainer, //!chatch Image From Api Her
-                ),
-              ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: CachedNetworkImage(
+              imageUrl: image,
+              fit: BoxFit.fill,
             ),
-            padding: const EdgeInsets.only(
-              right: 20,
-              bottom: 20,
-            ),
-            alignment: Alignment.bottomRight,
-            //Play Icon Container
-            //   child: Container(
-            //     width: 50,
-            //     height: 40,
-            //     decoration: BoxDecoration(
-            //       boxShadow: [
-            //         BoxShadow(
-            //             color: Colors.grey.withOpacity(0.7),
-            //             blurRadius: 5,
-            //             spreadRadius: 5),
-            //       ],
-            //       borderRadius: const BorderRadius.all(
-            //         Radius.circular(100),
-            //       ),
-            //     ),
-            //     child: IconButton(
-            //       onPressed: () {},
-            //       icon: const Icon(
-            //         Icons.play_arrow,
-            //         color: Colors.white,
-            //       ),
-            //     ),
-            //   ),
           ),
         ),
       ],

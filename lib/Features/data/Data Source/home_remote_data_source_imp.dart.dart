@@ -8,7 +8,7 @@ import 'home_remote_data_source.dart.dart';
 class HomeRemoteDataSourceImp extends HomeRemoteDataSource {
   final ApiService apiService;
 
-  HomeRemoteDataSourceImp({required this.apiService});
+  HomeRemoteDataSourceImp(this.apiService);
 
   // Fetches featured books from the API and returns a list of BookEntities
   @override
